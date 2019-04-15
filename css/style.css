@@ -1,2 +1,13 @@
 body {
-  background-color: darkorchid; }
+  background-color: #ffe2ad; }
+  body .sens-syr-info {
+    border: 2px solid black;
+    text-align: center; }
+  body h1 {
+    color: #567fb3; }
+  body h2 {
+    color: #add1ff; }
+  body h3 {
+    color: #b39868; }
+  body button {
+    color: #ffcd6e; }
