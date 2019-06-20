@@ -347,4 +347,8 @@ body a {
   color: #ffffff;
 }
 
+header .container .header-links .a {
+  padding: 3rem;
+}
+
 /*# sourceMappingURL=style.css.map */
