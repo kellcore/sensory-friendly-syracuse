@@ -9,12 +9,6 @@ class Users extends Component {
         }
     }
 
-    componentDidMount() {
-        fetch('/api/users')
-            .then(res => res.json())
-            .then(users => this.setState({ users }, () => console.log('Users fetched', users)));
-    }
-
     render() {
         return (
             <div>
