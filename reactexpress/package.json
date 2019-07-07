@@ -1,0 +1,22 @@
+{
+  "name": "reactexpress",
+  "version": "1.0.0",
+  "description": "Boilerplate for React and Express using Traversy Media tutorial",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kelly Corey",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^4.1.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
