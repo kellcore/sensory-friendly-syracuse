@@ -3,7 +3,7 @@ import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext } 
 import { FormClose, Login, Menu, UserAdd } from 'grommet-icons';
 import Navigation from './components/navigation';
 import Main from './components/main';
-import Home from './components/home';
+//import Home from './components/home';
 
 const theme = {
   global: {
@@ -89,7 +89,7 @@ class App extends Component {
                       align='center'
                       justify='center'
                     >
-                      sidebar
+                      <Navigation />
                     </Box>
                   </Collapsible>
                 ) : (
@@ -117,9 +117,9 @@ class App extends Component {
                     </Layer>
                   )}
                 <Box flex align='center' justify='center'>
-                  <Navigation />
+
                   <Main />
-                  <Home />
+
                   <p className="App-intro">{this.state.apiResponse} </p>
                 </Box>
               </Box>
