@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext } from 'grommet';
-import { FormClose, Menu } from 'grommet-icons';
+import { FormClose, Login, Menu, UserAdd } from 'grommet-icons';
 import Navigation from './components/navigation';
 import Main from './components/main';
 import Home from './components/home';
@@ -24,6 +24,20 @@ const AppBar = (props) => (
     direction='row'
     align='center'
     justify='between'
+    background='brand'
+    pad={{ left: 'medium', right: 'small', vertical: 'small' }}
+    elevation='medium'
+    style={{ zIndex: '1' }}
+    {...props}
+  />
+);
+
+const AppBarFoot = (props) => (
+  <Box
+    tag='footer'
+    direction='row'
+    align='center'
+    justify='center'
     background='brand'
     pad={{ left: 'medium', right: 'small', vertical: 'small' }}
     elevation='medium'
@@ -61,7 +75,8 @@ class App extends Component {
             <Box fill>
               <AppBar>
                 <Button icon={<Menu />} onClick={() => this.setState(prevState => ({ showSidebar: !prevState.showSidebar }))} />
-                <Heading level='3' margin='none'> sensory friendly syracuse </Heading>
+                <Button icon={<UserAdd />} onClick={() => { }} />
+                <Button icon={<Login />} onClick={() => { }} />
               </AppBar>
               <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
                 {(!showSidebar || size !== 'small') ? (
@@ -108,6 +123,9 @@ class App extends Component {
                   <p className="App-intro">{this.state.apiResponse} </p>
                 </Box>
               </Box>
+              <AppBarFoot>
+                <Heading level='5' margin='none'> sensory friendly syracuse © 2019 by kell.dev </Heading>
+              </AppBarFoot>
             </Box>
           )}
         </ResponsiveContext.Consumer>
