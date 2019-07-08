@@ -8,6 +8,6 @@ const HomePage = () => {
             <h3> help determine their sensory friendliness! </h3>
         </div>
     )
-}
+};
 
 export default HomePage;

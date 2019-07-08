@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-
-import Home from './components/pages/home';
+import Navigation from './components/navigation';
+import Main from './components/main';
+import Home from './components/home';
 
 class App extends Component {
   constructor(props) {
@@ -22,6 +23,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
+        <Navigation />
+        <Main />
         <Home />
         <p className="App-intro">{this.state.apiResponse} </p>
       </div>
