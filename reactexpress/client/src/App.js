@@ -5,6 +5,8 @@ import Navigation from './components/navigation';
 import Main from './components/main';
 //import Home from './components/home';
 
+
+// grommet theme
 const theme = {
   global: {
     colors: {
@@ -18,6 +20,7 @@ const theme = {
   },
 };
 
+// grommet AppBar
 const AppBar = (props) => (
   <Box
     tag='header'
@@ -32,6 +35,7 @@ const AppBar = (props) => (
   />
 );
 
+// grommet footer
 const AppBarFoot = (props) => (
   <Box
     tag='footer'
@@ -46,39 +50,33 @@ const AppBarFoot = (props) => (
   />
 );
 
+// creating App component
 class App extends Component {
+  // setting grommet header sidebar not to show on page load
   state = {
     showSidebar: false,
-  }
-  constructor(props) {
-    super(props);
-    this.state = { apiResponse: "" };
-  }
+  };
 
-  callAPI() {
-    fetch("http://localhost:9000/home")
-      .then(res => res.text())
-      .then(res => this.setState({ apiResponse: res }))
-      .catch(err => err);
-  }
-
-  componentDidMount() {
-    this.callAPI();
-  }
-
+  // beginning of what gets shown on the homepage
   render() {
     const { showSidebar } = this.state;
+    // what the app returns when it's called
     return (
       <Grommet theme={theme} full>
+        {/* makes the grommet layout mobile friendly */}
         <ResponsiveContext.Consumer>
           {size => (
+            // tells the grommet display to fill the screen
             <Box fill>
+              {/* constructs the app bar at the top of the screen with the hamburger menu and icons */}
               <AppBar>
                 <Button icon={<Menu />} onClick={() => this.setState(prevState => ({ showSidebar: !prevState.showSidebar }))} />
                 <Button icon={<UserAdd />} onClick={() => { }} />
                 <Button icon={<Login />} onClick={() => { }} />
               </AppBar>
+              {/* makes the grommet layout flex when display is changed */}
               <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
+                {/* logic and design for sidebar with hamburger menu */}
                 {(!showSidebar || size !== 'small') ? (
                   <Collapsible direction='horizontal' open={showSidebar}>
                     <Box
@@ -89,6 +87,7 @@ class App extends Component {
                       align='center'
                       justify='center'
                     >
+                      {/* calls the Navigation component imported above */}
                       <Navigation />
                     </Box>
                   </Collapsible>
@@ -117,10 +116,8 @@ class App extends Component {
                     </Layer>
                   )}
                 <Box flex align='center' justify='center'>
-
+                  {/* calls the Main component imported above */}
                   <Main />
-
-                  <p className="App-intro">{this.state.apiResponse} </p>
                 </Box>
               </Box>
               <AppBarFoot>
