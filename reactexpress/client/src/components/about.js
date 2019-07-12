@@ -1,12 +1,66 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const AboutPage = () => {
-    return (
-        <div>
-            <h1> about </h1>
-            <p> sensory friendly syracuse is a project designed to meet the needs of people in and around the Syracuse area who would like information about the noise level, lighting, and other environmental criteria before venturing out into the connunity. </p>
-        </div>
-    )
+class AboutPage extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { apiResponse: "" };
+    };
+
+    callAPI() {
+        fetch("http://localhost:9000/about")
+            .then(res => res.text())
+            .then(res => this.setState({ apiResponse: res }))
+            .catch(err => err);
+    };
+    componentDidMount() {
+        this.callAPI();
+    };
+    render() {
+        return (
+            <div>
+                <h1> about </h1>
+                <p> sensory friendly syracuse is a project designed to meet the needs of people in and around the Syracuse area who would like information about the noise level, lighting, and other environmental criteria before venturing out into the connunity. </p>
+                <p className="App-intro">{this.state.apiResponse} </p>
+            </div >
+        )
+    }
 };
 
 export default AboutPage;
+
+// import React, { Component } from 'react';
+
+// // imported component and changed HomePage from a function() to this
+// class HomePage extends Component {
+//     // setting the state for the api response from express backend
+//     constructor(props) {
+//         super(props);
+//         this.state = { apiResponse: "" };
+//     };
+
+//     // fetch call to express server
+//     callAPI() {
+//         fetch("http://localhost:9000/home")
+//             .then(res => res.text())
+//             .then(res => this.setState({ apiResponse: res }))
+//             .catch(err => err);
+//     };
+
+//     // calls callAPI function when component loads
+//     componentDidMount() {
+//         this.callAPI();
+//     };
+//     // have to put in render before the return or else the code breaks
+//     render() {
+//         return (
+//             <div>
+//                 <h1> sensory friendly syracuse </h1>
+//                 <h2> rate and review local places </h2>
+//                 <h3> help determine their sensory friendliness! </h3>
+//                 <p className="App-intro">{this.state.apiResponse} </p>
+//             </div>
+//         )
+//     }
+// };
+
+// export default HomePage;

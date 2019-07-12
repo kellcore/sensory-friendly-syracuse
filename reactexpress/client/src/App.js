@@ -111,7 +111,7 @@ class App extends Component {
                         align='center'
                         justify='center'
                       >
-                        sidebar
+                        <Navigation />
                     </Box>
                     </Layer>
                   )}
