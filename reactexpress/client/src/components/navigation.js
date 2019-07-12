@@ -10,6 +10,7 @@ const Navigation = () => {
                 <li><NavLink to='/contact'> Contact </NavLink></li>
                 <li><NavLink to='/login'> Login </NavLink></li>
                 <li><NavLink to='/signup'> Signup </NavLink></li>
+                <li><NavLink to='/reviews'> Reviews </NavLink> </li>
             </ul>
         </nav>
     )
