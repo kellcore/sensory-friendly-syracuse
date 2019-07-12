@@ -17,6 +17,7 @@ const signupRouter = require("./routes/signup");
 const reviewsRouter = require("./routes/reviews");
 const resourcesRouter = require("./routes/resources");
 const venuesRouter = require("./routes/venues");
+const dashboardRouter = require('./routes/dashboard');
 
 var app = express();
 
@@ -42,6 +43,7 @@ app.use('/signup', signupRouter);
 app.use('/reviews', reviewsRouter);
 app.use('/resources', resourcesRouter);
 app.use('/venues', venuesRouter);
+app.use('/dashboard', dashboardRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

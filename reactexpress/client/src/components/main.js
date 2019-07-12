@@ -8,6 +8,7 @@ import SignupPage from './signup';
 import ReviewsPage from './reviews';
 import ResourcesPage from './resources';
 import VenuesPage from './venues';
+import DashboardPage from './dashboard';
 
 const Main = () => {
     return (
@@ -20,6 +21,7 @@ const Main = () => {
             <Route exact path='/reviews' component={ReviewsPage}></Route>
             <Route exact path='/resources' component={ResourcesPage}></Route>
             <Route exact path='/venues' component={VenuesPage}></Route>
+            <Route exact path='/dashboard' component={DashboardPage}></Route>
         </Switch>
     )
 };

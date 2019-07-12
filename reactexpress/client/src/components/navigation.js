@@ -13,6 +13,7 @@ const Navigation = () => {
                 <li><NavLink to='/reviews'> Reviews </NavLink> </li>
                 <li><NavLink to='/resources'> Resources </NavLink> </li>
                 <li><NavLink to='/venues'> Venues </NavLink> </li>
+                <li><NavLink to='/dashboard'> Dashboard </NavLink> </li>
             </ul>
         </nav>
     )
