@@ -1,8 +1,9 @@
 import React from 'react';
-import { NavLink, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import HomePage from './home';
 import AboutPage from './about';
 import ContactPage from './contact';
+import LoginPage from './login';
 
 const Main = () => {
     return (
@@ -10,6 +11,7 @@ const Main = () => {
             <Route exact path='/' component={HomePage}></Route>
             <Route exact path='/about' component={AboutPage}></Route>
             <Route exact path='/contact' component={ContactPage}></Route>
+            <Route exact path='/login' component={LoginPage}></Route>
         </Switch>
     )
 };
