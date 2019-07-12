@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-router.get("/about", (req, res) => {
-    const message = "Back end's connected to the front end on the about page";
-    res.send({ message });
+router.get("/", (req, res) => {
+    res.send("Back end's connected to the front end on the about page");
 });
 
 module.exports = router;
+
+// router.get only needs "/", not "/about"
