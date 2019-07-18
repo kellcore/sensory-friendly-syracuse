@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Box, Heading } from "grommet";
 
 // imported component and changed HomePage from a function() to this
 class HomePage extends Component {
@@ -23,12 +24,12 @@ class HomePage extends Component {
     // have to put in render before the return or else the code breaks
     render() {
         return (
-            <div>
-                <h1> sensory friendly syracuse </h1>
+            <Box fill align="center" justify="center">
+                <Heading> sensory friendly syracuse </Heading>
                 <h2> rate and review local places </h2>
                 <h3> help determine their sensory friendliness! </h3>
                 <p className="App-intro">{this.state.apiResponse} </p>
-            </div>
+            </Box>
         )
     }
 };

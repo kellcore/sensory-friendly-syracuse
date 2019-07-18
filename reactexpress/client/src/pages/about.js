@@ -23,7 +23,7 @@ class AboutPage extends Component {
                 {/* replacing div with a flexbox taking up the width of the screen and aligning/justifying the content in the center */}
                 <Heading> about </Heading>
                 {/* this is special formatting from grommet in lieu of h1 */}
-                <p> sensory friendly syracuse is a project designed to meet the needs of people in and around the Syracuse area who would like information about the noise level, lighting, and other environmental criteria before venturing out into the community. </p>
+                <h3> sensory friendly syracuse is a project designed to meet the needs of people in and around the Syracuse area who would like information about the noise level, lighting, and other environmental criteria before venturing out into the community. </h3>
                 <p className="App-intro">{this.state.apiResponse} </p>
             </Box>
         )

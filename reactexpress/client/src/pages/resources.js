@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Box, Heading } from "grommet";
 
 class ResourcesPage extends Component {
     constructor(props) {
@@ -17,11 +18,11 @@ class ResourcesPage extends Component {
     };
     render() {
         return (
-            <div>
-                <h1> resources </h1>
+            <Box fill align="center" justify="center">
+                <Heading> resources </Heading>
                 <h2> screen with links to resources about sensory friendliness </h2>
                 <p className="App-intro">{this.state.apiResponse} </p>
-            </div>
+            </Box>
         )
     };
 };
