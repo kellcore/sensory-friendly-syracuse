@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Box, Heading } from "grommet";
+import { Box, Heading, Paragraph } from "grommet";
 
 class ContactPage extends Component {
     constructor(props) {
@@ -19,8 +19,8 @@ class ContactPage extends Component {
     render() {
         return (
             <Box fill align="center" justify="center">
-                <Heading> contact </Heading>
-                <h2> social media links go here </h2>
+                <Heading textAlign="center" color="#3E3D3C"> contact </Heading>
+                <Paragraph textAlign="center" color="#3E3D3C"> social media links go here </Paragraph>
                 <p className="App-intro">{this.state.apiResponse} </p>
             </Box>
         )

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Box, Heading } from "grommet";
+import { Box, Heading, Paragraph } from "grommet";
 // imported styling from grommet
 
 class AboutPage extends Component {
@@ -21,9 +21,9 @@ class AboutPage extends Component {
         return (
             <Box fill align="center" justify="center">
                 {/* replacing div with a flexbox taking up the width of the screen and aligning/justifying the content in the center */}
-                <Heading> about </Heading>
+                <Heading textAlign="center" color="#3E3D3C"> about </Heading>
                 {/* this is special formatting from grommet in lieu of h1 */}
-                <h3> sensory friendly syracuse is a project designed to meet the needs of people in and around the Syracuse area who would like information about the noise level, lighting, and other environmental criteria before venturing out into the community. </h3>
+                <Paragraph textAlign="center" color="#3E3D3C">sensory friendly syracuse is a project designed to meet the needs of people in and around the Syracuse area who would like information about the noise level, lighting, and other environmental criteria before venturing out into the community. </Paragraph>
                 <p className="App-intro">{this.state.apiResponse} </p>
             </Box>
         )

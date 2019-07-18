@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Box, Heading } from "grommet";
+import { Box, Heading, Paragraph } from "grommet";
 
 class ReviewsPage extends Component {
     constructor(props) {
@@ -19,8 +19,8 @@ class ReviewsPage extends Component {
     render() {
         return (
             <Box fill align="center" justify="center">
-                <Heading> reviews </Heading>
-                <h2> screen where logged in users can create, edit, and delete reviews </h2>
+                <Heading textAlign="center" color="#3E3D3C"> reviews </Heading>
+                <Paragraph textAlign="center" color="#3E3D3C"> screen where logged in users can create, edit, and delete reviews </Paragraph>
                 <p className="App-intro">{this.state.apiResponse} </p>
             </Box>
         )

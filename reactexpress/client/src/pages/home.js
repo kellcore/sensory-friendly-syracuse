@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Box, Heading } from "grommet";
+import { Box, Heading, Paragraph } from "grommet";
 
 // imported component and changed HomePage from a function() to this
 class HomePage extends Component {
@@ -25,9 +25,9 @@ class HomePage extends Component {
     render() {
         return (
             <Box fill align="center" justify="center">
-                <Heading> sensory friendly syracuse </Heading>
-                <h2> rate and review local places </h2>
-                <h3> help determine their sensory friendliness! </h3>
+                <Heading textAlign="center" color="#3E3D3C"> sensory friendly syracuse </Heading>
+                <Paragraph textAlign="center" color="#3E3D3C"> rate and review local places </Paragraph>
+                <Paragraph textAlign="center" color="#3E3D3C"> help determine their sensory friendliness! </Paragraph>
                 <p className="App-intro">{this.state.apiResponse} </p>
             </Box>
         )
