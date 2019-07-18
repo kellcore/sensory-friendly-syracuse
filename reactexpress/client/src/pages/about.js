@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Box, Heading } from "grommet";
+// imported styling from grommet
 
 class AboutPage extends Component {
     constructor(props) {
@@ -17,11 +19,13 @@ class AboutPage extends Component {
     };
     render() {
         return (
-            <div>
-                <h1> about </h1>
-                <p> sensory friendly syracuse is a project designed to meet the needs of people in and around the Syracuse area who would like information about the noise level, lighting, and other environmental criteria before venturing out into the connunity. </p>
+            <Box fill align="center" justify="center">
+                {/* replacing div with a flexbox taking up the width of the screen and aligning/justifying the content in the center */}
+                <Heading> about </Heading>
+                {/* this is special formatting from grommet in lieu of h1 */}
+                <p> sensory friendly syracuse is a project designed to meet the needs of people in and around the Syracuse area who would like information about the noise level, lighting, and other environmental criteria before venturing out into the community. </p>
                 <p className="App-intro">{this.state.apiResponse} </p>
-            </div >
+            </Box>
         )
     }
 };
