@@ -82,7 +82,7 @@ class App extends Component {
                     <Box
                       flex
                       width='small'
-                      background='light-2'
+                      background='#e8eaeb'
                       elevation='small'
                       align='center'
                       justify='center'
@@ -94,7 +94,7 @@ class App extends Component {
                 ) : (
                     <Layer>
                       <Box
-                        background='light-2'
+                        background='#e8eaeb'
                         tag='header'
                         justify='end'
                         align='center'
@@ -107,7 +107,7 @@ class App extends Component {
                       </Box>
                       <Box
                         fill
-                        background='light-2'
+                        background='#e8eaeb'
                         align='center'
                         justify='center'
                       >
