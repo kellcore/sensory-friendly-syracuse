@@ -10,7 +10,7 @@ import Main from './components/main';
 const theme = {
   global: {
     colors: {
-      brand: '#228BE6',
+      brand: '#D44500',
     },
     font: {
       family: 'Roboto',
@@ -112,7 +112,7 @@ class App extends Component {
                         justify='center'
                       >
                         <Navigation />
-                    </Box>
+                      </Box>
                     </Layer>
                   )}
                 <Box flex align='center' justify='center'>
