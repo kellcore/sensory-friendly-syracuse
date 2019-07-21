@@ -1,14 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import HomePage from '../pages/home';
-import AboutPage from '../pages/about';
-import ContactPage from '../pages/contact';
-import LoginPage from './login';
-import SignupPage from './signup';
-import ReviewsPage from '../pages/reviews';
-import ResourcesPage from '../pages/resources';
-import VenuesPage from '../pages/venues';
-import DashboardPage from './dashboard';
+import HomePage from '../pages/Home';
+import AboutPage from '../pages/About';
+import ContactPage from '../pages/Contact';
+import LoginPage from './Login';
+import SignupPage from './Signup';
+import ReviewsPage from '../pages/Reviews';
+import ResourcesPage from '../pages/Resources';
+import VenuesPage from '../pages/Venues';
+import DashboardPage from './Dashboard';
 
 const Main = () => {
     return (

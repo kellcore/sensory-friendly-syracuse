@@ -27,7 +27,7 @@ class HomePage extends Component {
         return (
             <Box fill align="center" justify="center">
                 <Heading textAlign="center" color="#3E3D3C"> sensory friendly syracuse </Heading>
-                <Paragraph textAlign="center" color="#3E3D3C"> is the place you want to go in syracuse sensory friendly or unfriendly? leave a review and help steer the conversation! </Paragraph>
+                <Paragraph textAlign="center" color="#3E3D3C"> write one sentence copy here </Paragraph>
                 <Box
                     flex={false}
                     overflow="auto"

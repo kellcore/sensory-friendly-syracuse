@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext } from 'grommet';
 import { FormClose, Login, Menu, UserAdd } from 'grommet-icons';
-import Navigation from './components/navigation';
-import Main from './components/main';
+import Navigation from './components/Navigation';
+import Main from './components/Main';
 //import Home from './components/home';
-
 
 // grommet theme
 const theme = {
@@ -49,6 +48,7 @@ const AppBarFoot = (props) => (
     {...props}
   />
 );
+
 
 // creating App component
 class App extends Component {
@@ -131,3 +131,4 @@ class App extends Component {
   }
 };
 export default App;
+
