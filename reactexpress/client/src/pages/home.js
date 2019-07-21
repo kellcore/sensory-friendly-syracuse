@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Box, Heading, Paragraph } from "grommet";
+import { Box, Heading, Paragraph, TextInput } from "grommet";
+import { Search } from 'grommet-icons';
 
 // imported component and changed HomePage from a function() to this
 class HomePage extends Component {
@@ -26,8 +27,19 @@ class HomePage extends Component {
         return (
             <Box fill align="center" justify="center">
                 <Heading textAlign="center" color="#3E3D3C"> sensory friendly syracuse </Heading>
-                <Paragraph textAlign="center" color="#3E3D3C"> rate and review local places </Paragraph>
-                <Paragraph textAlign="center" color="#3E3D3C"> help determine their sensory friendliness! </Paragraph>
+                <Paragraph textAlign="center" color="#3E3D3C"> is the place you want to go in syracuse sensory friendly or unfriendly? leave a review and help steer the conversation! </Paragraph>
+                <Box
+                    flex={false}
+                    overflow="auto"
+                    round="large"
+                    background={{ color: "dark-5", opacity: "weak" }}
+                    direction="row"
+                    align="center"
+                    pad={{ horizontal: "medium", vertical: "small" }}
+                    margin={{ horizontal: "medium", top: "medium" }} >
+                    <Search color="plain" />
+                    <TextInput plain placeholder="Find local venues..." type="search" />
+                </Box>
                 <p className="App-intro">{this.state.apiResponse} </p>
             </Box>
         )
