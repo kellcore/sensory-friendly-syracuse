@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Box, Heading, Paragraph, TextInput } from "grommet";
 import { Search } from 'grommet-icons';
+import Logo from '../components/Logo2.png';
+
+console.log(Logo);
 
 // imported component and changed HomePage from a function() to this
 class HomePage extends Component {
@@ -26,7 +29,8 @@ class HomePage extends Component {
     render() {
         return (
             <Box fill align="center" justify="center">
-                <Heading textAlign="center" color="#3E3D3C"> sensory friendly syracuse </Heading>
+                {/* <Heading textAlign="center" color="#3E3D3C"> sensory friendly syracuse </Heading> */}
+                <img src={Logo} alt="logo" />
                 <Paragraph textAlign="center" color="#3E3D3C"> write one sentence copy here </Paragraph>
                 <Box
                     flex={false}
