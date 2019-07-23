@@ -31,7 +31,7 @@ class HomePage extends Component {
             <Box fill align="center" justify="center">
                 {/* <Heading textAlign="center" color="#3E3D3C"> sensory friendly syracuse </Heading> */}
                 <img src={Logo} alt="logo" />
-                <Paragraph textAlign="center" color="#3E3D3C"> write one sentence copy here </Paragraph>
+                {/* <Paragraph textAlign="center" color="#3E3D3C"> write one sentence copy here </Paragraph> */}
                 <Box
                     flex={false}
                     overflow="auto"
@@ -44,7 +44,7 @@ class HomePage extends Component {
                     <Search color="plain" />
                     <TextInput plain placeholder="Find local venues..." type="search" />
                 </Box>
-                <p className="App-intro">{this.state.apiResponse} </p>
+                {/* <p className="App-intro">{this.state.apiResponse} </p> */}
             </Box>
         )
     }
